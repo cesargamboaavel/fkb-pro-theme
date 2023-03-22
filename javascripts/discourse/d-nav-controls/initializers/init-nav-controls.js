@@ -4,6 +4,7 @@ export default {
   name: "discourse-navigation-controls",
 
   initialize() {
+    console.log('test');
     withPluginApi("0.8.13", (api) => {
       const site = api.container.lookup("site:main");
       if (!site.mobileView) return;
