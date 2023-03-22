@@ -27,7 +27,10 @@ export default {
     <a class="text" href=${locationString}>Back to Curriculum
     </a>
 `;
-  document.body.appendChild(divEl);
+//   document.body.appendChild(divEl);
+    if(document.querySelector('.sidebar-sections')){
+      document.querySelector('.sidebar-sections').appendChild(divEl);
+    }
     
     withPluginApi("0.8.13", (api) => {
       const site = api.container.lookup("site:main");
