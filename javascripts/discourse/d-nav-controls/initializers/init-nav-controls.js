@@ -19,7 +19,7 @@ export default {
       
       window.addEventListener('load', function(){
         console.log('loaded script');
-      })
+      });
 
       window.addEventListener('scroll', function() { 
         scrollTop = window.scrollY;
