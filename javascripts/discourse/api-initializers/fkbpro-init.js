@@ -34,6 +34,11 @@ export default {
           tracker.resetTracking();
         }
       }); 
+    api.addNavigationBarItem({
+       name: "cesar item",
+        displayName: "cesar item"
+        href: "https://www.discourse.org",
+      })
       // Sticky New Topic Banner Category
       api.modifyClass("controller:discovery/categories", {
         pluginId: "sticky-new-topics-banner",
