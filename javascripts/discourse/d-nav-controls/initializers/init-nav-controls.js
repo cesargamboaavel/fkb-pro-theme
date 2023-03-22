@@ -4,16 +4,20 @@ export default {
   name: "discourse-navigation-controls",
 
   initialize() {
-    var locationString = "google.com";
     function whereToReturn(){
-    if(window.referrer === ""){
-      console.log('window referrer')
+    if(window.referrer !== ""){
+      console.log('window referrer', window.referrer)
+      return window.referrer
     }
-    
+    else{
+      console.log('going here');
+      return 'https://meta.discourse.org/t/how-to-put-javascript-in-discourse-theme/246157/8'
+    }
   }
   function getURL(){
     window.location.href="https://www.w3schools.com/jsref/event_onclick.asp"
   };
+  var locationString = whereToReturn();
   var divEl = document.createElement('div');
   divEl.className = 'link-wrapper';
   divEl.innerHTML = `
