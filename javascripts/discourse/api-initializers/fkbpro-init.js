@@ -36,7 +36,7 @@ export default {
       }); 
     api.addNavigationBarItem({
        name: "cesar item",
-        displayName: "cesar item"
+        displayName: "cesar item",
         href: "https://www.discourse.org",
       })
       // Sticky New Topic Banner Category
