@@ -32,6 +32,10 @@ export default {
       document.querySelector('.sidebar-sections').appendChild(divEl);
     }
     
+    window.addEventListener("load", (event) => {
+  console.log("page is fully loaded");
+});
+    
     withPluginApi("0.8.13", (api) => {
       const site = api.container.lookup("site:main");
       if (!site.mobileView) return;
