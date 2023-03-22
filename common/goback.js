@@ -1,3 +1,4 @@
+console.log('loaded file')
 function whereToReturn(){
     if(window.referrer === ""){
       console.log('window referrer')
