@@ -9,10 +9,10 @@ console.log('first', queryString);
     let text = "Back to School"
     function whereToReturn(){
       console.log('Referrer', Document.referrer);
-    if(Document.referrer){
+    if(document.referrer){
       console.log('window referrer', Document.referrer)
       text = "Back to School";
-      return window.referrer
+      return document.referrer
     }
     else{
       // fallback as i dont think we will support custom domains for beta
