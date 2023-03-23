@@ -4,19 +4,31 @@ export default {
   name: "discourse-navigation-controls",
 
   initialize() {
-    const queryString = window.location.search;
-console.log('first', queryString);
+   // cesar
+      const queryString = window.location.search;
+  const queryParams = new URLSearchParams(queryString);
+  const referrerUrl = queryParams.get('url');
+  const referrerPath = queryParams.get('path'); 
+  if(referrerUrl && referrerPath){
+      localStorage.setItem('fullpath', referrerUrl + referrerPath)
+  }
+  
     let text = "Back to School"
     function whereToReturn(){
-      console.log('Referrer', Document.referrer);
-    if(document.referrer){
-      console.log('window referrer', Document.referrer)
+        
+    // first option, using parameters if they exist 
+    if(localStorage.getItem('fullpath')){
+        text = "Back to Curriculum";
+        return localStorage.getItem('fullpath');
+    }
+    // second option 'document referrer'
+    if(document.referrer || localStorage.getItem('referrerPath')){
+      localStorage.setItem('referrerPath', document.referrer)
       text = "Back to School";
       return document.referrer
     }
     else{
       // fallback as i dont think we will support custom domains for beta
-      console.log('fallback option');
       return window.location.origin.replace('.community', '');
     }
   }
@@ -33,12 +45,12 @@ console.log('first', queryString);
 `;
     window.addEventListener("load", (event) => {
       const queryString = window.location.search;
-console.log('second', queryString);
-  console.log("page is fully loaded");
       if(document.querySelector('.sidebar-sections')){
       document.querySelector('.sidebar-sections').prepend(divEl);
     }
 });
+    
+   // cesar
     
     withPluginApi("0.8.13", (api) => {
       const site = api.container.lookup("site:main");
