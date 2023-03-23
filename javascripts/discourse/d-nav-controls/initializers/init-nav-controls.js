@@ -28,12 +28,13 @@ export default {
     </a>
 `;
 //   document.body.appendChild(divEl);
-    if(document.querySelector('.sidebar-sections')){
-      document.querySelector('.sidebar-sections').appendChild(divEl);
-    }
+    
     
     window.addEventListener("load", (event) => {
   console.log("page is fully loaded");
+      if(document.querySelector('.sidebar-sections')){
+      document.querySelector('.sidebar-sections').appendChild(divEl);
+    }
 });
     
     withPluginApi("0.8.13", (api) => {
