@@ -8,14 +8,16 @@ export default {
 console.log('first', queryString);
     let text = "Back to School"
     function whereToReturn(){
-    if(window.referrer){
-      console.log('window referrer', window.referrer)
-      text = "Back to Curriculum";
+      console.log('Referrer', Document.referrer);
+    if(Document.referrer){
+      console.log('window referrer', Document.referrer)
+      text = "Back to School";
       return window.referrer
     }
     else{
-      text = "Back to noreferrer";
-      return 'https://meta.discourse.org/t/how-to-put-javascript-in-discourse-theme/246157/8'
+      // fallback as i dont think we will support custom domains for beta
+      console.log('fallback option');
+      return window.location.origin.replace('.community', '');
     }
   }
 
