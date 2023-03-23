@@ -7,20 +7,21 @@
     justify-content: center;
     width: auto;
     border: solid 1px black;
-  background-color: white;
+    background-color: white;
+    border-radius: 4px;
   }
   .link-wrapper .text{
-    font-family: 'Inter';
-    margin-left: 20px;
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-display: flex;
-align-items: center;
-letter-spacing: 0.5px;
-
-color: #000000;
+    font-family: inherit;
+    margin-left: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    color: #000000;
   }
 
 //
