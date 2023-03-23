@@ -4,6 +4,8 @@ export default {
   name: "discourse-navigation-controls",
 
   initialize() {
+    const queryString = window.location.search;
+console.log('first', queryString);
     let text = "Back to School"
     function whereToReturn(){
     if(window.referrer){
@@ -28,6 +30,8 @@ export default {
     </a>
 `;
     window.addEventListener("load", (event) => {
+      const queryString = window.location.search;
+console.log('second', queryString);
   console.log("page is fully loaded");
       if(document.querySelector('.sidebar-sections')){
       document.querySelector('.sidebar-sections').prepend(divEl);
