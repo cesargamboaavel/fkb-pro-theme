@@ -33,7 +33,7 @@ export default {
     window.addEventListener("load", (event) => {
   console.log("page is fully loaded");
       if(document.querySelector('.sidebar-sections')){
-      document.querySelector('.sidebar-sections').appendChild(divEl);
+      document.querySelector('.sidebar-sections').prepend(divEl);
     }
 });
     
