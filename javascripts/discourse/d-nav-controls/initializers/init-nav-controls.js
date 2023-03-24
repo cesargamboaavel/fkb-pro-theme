@@ -10,7 +10,7 @@ export default {
   const referrerUrl = queryParams.get('url');
   const referrerPath = queryParams.get('path'); 
   if(referrerUrl && referrerPath){
-      localStorage.setItem('fullpath', referrerUrl + referrerPath)
+      localStorage.setItem('fullpath', window.location.protocol + "//" + referrerUrl + referrerPath)
   }
   
     let text = "Back to School"
