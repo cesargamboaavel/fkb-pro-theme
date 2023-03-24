@@ -25,7 +25,9 @@ export default {
     }
     // second option 'document referrer'
     if(document.referrer || localStorage.getItem('referrerPath')){
-      localStorage.setItem('referrerPath', document.referrer)
+      if(document.referrer){
+        localStorage.setItem('referrerPath', document.referrer);
+      }
       text = "Back to School";
       return document.referrer
     }
