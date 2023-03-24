@@ -5,7 +5,7 @@ export default {
 
   initialize() {
    // cesar
-      const queryString = window.location.search;
+       const queryString = window.location.search;
   const queryParams = new URLSearchParams(queryString);
   const referrerUrl = queryParams.get('url');
   const referrerPath = queryParams.get('path'); 
@@ -18,7 +18,9 @@ export default {
         
     // first option, using parameters if they exist 
     if(localStorage.getItem('fullpath')){
-        text = "Back to Curriculum";
+        if(localStorage.getItem('fullpath').includes('courses')){
+            text = "Back to Curriculum";     
+        }
         return localStorage.getItem('fullpath');
     }
     // second option 'document referrer'
