@@ -25,8 +25,16 @@ export default {
       ////////
       
       window.addEventListener('load', function(){
+        var test = document.querySelector('.btn-sidebar-toggle')
         window.addEventListener('click', function(){
           console.log('clicked')
+          console.log('btn-sidebar-toggle');
+          console.log('test', test)
+        })
+        test.addEventListener('click', function(){
+          console.log('clicked test')
+          console.log('btn-sidebar-toggles');
+          console.log('test', test)
         })
       })
       ////////
