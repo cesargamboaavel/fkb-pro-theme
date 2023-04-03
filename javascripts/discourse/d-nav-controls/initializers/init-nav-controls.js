@@ -68,10 +68,12 @@ export default {
     `;
     const timeOut = setTimeout(function(){
         if(document.querySelector('.sidebar-sections')) {
-            document.querySelector('.sidebar-sections').prepend(divEl);
-            clearTimeout(timeOut)
+            if(!document.querySelector('.link-wrapper')){
+                document.querySelector('.sidebar-sections').prepend(divEl);
+                clearTimeout(timeOut)
+            }
           }
-    }, 500)
+    }, 100)
 
       })
     });
