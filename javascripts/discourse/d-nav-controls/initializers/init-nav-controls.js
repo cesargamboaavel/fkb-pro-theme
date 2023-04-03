@@ -68,11 +68,11 @@ export default {
     `;
     const timeOut = setTimeout(function(){
         if(document.querySelector('.sidebar-sections')) {
+            document.querySelector('.sidebar-sections').prepend(divEl);
             clearTimeout(timeOut)
-            return document.querySelector('.sidebar-sections')
           }
     }, 500)
-    timeOut.prepend(divEl);
+
       })
     });
     withPluginApi('0.8.13', (api) => {
