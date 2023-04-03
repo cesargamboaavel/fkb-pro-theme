@@ -24,32 +24,9 @@ export default {
 
       ////////
 console.log('heeeeee2');
-      window.addEventListener('load', function () {
-        var test = document.querySelector('.btn-sidebar-toggle');
-        console.log('heeeeee3');
-        if (document.querySelector('.sidebar-sections')) {
-          document.querySelector('.sidebar-sections').prepend(divEl);
-        }
-        if (test) {
-          console.log('heeeeee4');
-          test.addEventListener('click', function () {
-            // tested code
-            const queryString = window.location.search;
-            const queryParams = new URLSearchParams(queryString);
-            const communityReferrerUrl = queryParams.get('url');
-            const communityReferrerPath = queryParams.get('path');
-            if (communityReferrerUrl && communityReferrerPath) {
-              localStorage.setItem(
-                'full_community_path',
-                window.location.protocol +
-                  '//' +
-                  communityReferrerUrl +
-                  communityReferrerPath
-              );
-            }
-
-            let text = 'Back to School';
-            function whereToReturn() {
+      
+      
+       function whereToReturn() {
               // first option, using parameters if they exist
               if (localStorage.getItem('full_community_path')) {
                 if (
@@ -79,6 +56,34 @@ console.log('heeeeee2');
                 return window.location.origin.replace('.community', '');
               }
             }
+      
+      
+      window.addEventListener('load', function () {
+        var test = document.querySelector('.btn-sidebar-toggle');
+        console.log('heeeeee3');
+        if (document.querySelector('.sidebar-sections')) {
+          document.querySelector('.sidebar-sections').prepend(divEl);
+        }
+        if (test) {
+          console.log('heeeeee4');
+          test.addEventListener('click', function () {
+            console.log('heeeeee5');
+            // tested code
+            const queryString = window.location.search;
+            const queryParams = new URLSearchParams(queryString);
+            const communityReferrerUrl = queryParams.get('url');
+            const communityReferrerPath = queryParams.get('path');
+            if (communityReferrerUrl && communityReferrerPath) {
+              localStorage.setItem(
+                'full_community_path',
+                window.location.protocol +
+                  '//' +
+                  communityReferrerUrl +
+                  communityReferrerPath
+              );
+            }
+
+            let text = 'Back to School';
 
             var locationString = whereToReturn();
             divEl.className = 'link-wrapper';
@@ -89,6 +94,7 @@ console.log('heeeeee2');
     <a class="text" href=${locationString} title=${text}>${text}
     </a>
 `;
+            console.log('final');
             // tested code
           });
         }
