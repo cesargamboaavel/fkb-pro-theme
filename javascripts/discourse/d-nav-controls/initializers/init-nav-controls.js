@@ -16,6 +16,12 @@ export default {
 
       const add_class_on_scroll = () => body.classList.add(hiddenNavClass);
       const remove_class_on_scroll = () => body.classList.remove(hiddenNavClass);
+      
+      window.addEventListener('load', function() { 
+        document.querySelector('.btn-sidebar-toggle').addEventListener('click', function(){
+          console.log('clicked');
+        }
+      }
 
       window.addEventListener('scroll', function() { 
         scrollTop = window.scrollY;
