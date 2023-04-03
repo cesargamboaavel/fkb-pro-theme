@@ -18,11 +18,13 @@ export default {
       const remove_class_on_scroll = () => body.classList.remove(hiddenNavClass);
       
        window.addEventListener('load', function () {
+         console.log('hellooo');
         var test = document.querySelector('.btn-sidebar-toggle');
         if (document.querySelector('.sidebar-sections')) {
           document.querySelector('.sidebar-sections').prepend(divEl);
         }
         if (test) {
+          console.log('testestse');
           test.addEventListener('click', function () {
             // tested code
             const queryString = window.location.search;
