@@ -66,7 +66,7 @@ export default {
         <a class="text" href=${locationString} title=${text}>${text}
         </a>
     `;
-        document.querySelector('.sidebar-sections').prepend(divEl);
+        document.querySelector('.sidebar-wrapper').prepend(divEl);
       })
     });
     withPluginApi('0.8.13', (api) => {
