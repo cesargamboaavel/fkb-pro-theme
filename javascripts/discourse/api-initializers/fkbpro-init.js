@@ -72,12 +72,7 @@ export default {
           return false;
         }
       });
-      api.onAppEvent(name, fn) {
-        console.log('app event');
-      }
-      api.onPageChange(fn) {
-        console.log('changed);
-      }
+      
       // Sticky New Topic Banner PM
       api.modifyClass("controller:user-topics-list", {
         pluginId: "sticky-new-topics-banner",
