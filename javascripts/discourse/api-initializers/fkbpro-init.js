@@ -7,6 +7,8 @@ export default {
   name: "fkbpro",
   initialize() {
     withPluginApi("0.8.7", (api) => {
+      
+      console.log('heeeeee');
     
       // Use same template on Desktop and MobileView
       api.modifyClass("component:topic-list-item", {
