@@ -25,7 +25,15 @@ export default {
       ////////
       
       api.onAppEvent('sidebar-hamburger-dropdown:rendered', () => {
-        console.log('a custom footer was rendered');
+        console.log('hamburguer');
+      });
+      
+      api.onAppEvent('user-menu:navigation', () => {
+        console.log('user menu navigation');
+      });
+      
+      api.onAppEvent('user-menu:rendered', () => {
+        console.log('user menu navigation');
       });
       
       ///////
