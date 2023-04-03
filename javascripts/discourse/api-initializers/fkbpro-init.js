@@ -99,7 +99,8 @@ console.log('heeeeee2');
             
             if (document.querySelector('.sidebar-sections')) {
           let text = 'Back to School';
-
+            console.log('hereeee');
+              var divEl = document.createElement('div');
             var locationString = whereToReturn();
             divEl.className = 'link-wrapper';
             divEl.innerHTML = `
