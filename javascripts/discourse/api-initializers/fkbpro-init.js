@@ -24,8 +24,10 @@ export default {
       
       ////////
       
-      window.addEventListener('click', function(){
-        console.log('hiiiiii click');
+      window.addEventListener('load', function(){
+        window.addEventListener('click', function(){
+          console.log('clicked')
+        })
       })
       ////////
       
