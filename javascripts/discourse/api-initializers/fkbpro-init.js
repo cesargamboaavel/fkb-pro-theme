@@ -23,13 +23,15 @@ export default {
       });
 
       ////////
-
+console.log('heeeeee2');
       window.addEventListener('load', function () {
         var test = document.querySelector('.btn-sidebar-toggle');
+        console.log('heeeeee3');
         if (document.querySelector('.sidebar-sections')) {
           document.querySelector('.sidebar-sections').prepend(divEl);
         }
         if (test) {
+          console.log('heeeeee4');
           test.addEventListener('click', function () {
             // tested code
             const queryString = window.location.search;
