@@ -19,6 +19,14 @@ export default {
           }
         },
       });
+      
+      ////////
+      
+      api.onAppEvent('sidebar-hamburger-dropdown:rendered', () => {
+        console.log('a custom footer was rendered');
+      });
+      
+      ///////
       // Sticky New Topic Banner Latest
       api.modifyClass("controller:discovery/topics", {
         pluginId: "sticky-new-topics-banner",
