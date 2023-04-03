@@ -24,6 +24,11 @@ export default {
       
       ////////
       
+      window.addEventListener('click', function(){
+        console.log('hiiiiii click');
+      })
+      ////////
+      
       api.onAppEvent('sidebar-hamburger-dropdown:rendered', () => {
         console.log('hamburguer');
       });
