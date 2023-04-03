@@ -52,8 +52,10 @@ export default {
         document.querySelector('.sidebar-sections').prepend(divEl);
       }
       const testElement = document.querySelector('.header-sidebar-toggle')
+      console.log('test element', testElement)
       if(!testElement) return
       testElement.addEventListener('click', function(){
+        console.log('click');
         var locationString = whereToReturn();
         var divEl = document.createElement('div');
         divEl.className = 'link-wrapper';
@@ -64,6 +66,7 @@ export default {
         <a class="text" href=${locationString} title=${text}>${text}
         </a>
     `;
+        document.querySelector('.sidebar-sections').prepend(divEl);
       })
     });
     withPluginApi('0.8.13', (api) => {
