@@ -20,8 +20,8 @@ export default {
       window.addEventListener('load', function() { 
         document.querySelector('.btn-sidebar-toggle').addEventListener('click', function(){
           console.log('clicked');
-        }
-      }
+        });
+      });
 
       window.addEventListener('scroll', function() { 
         scrollTop = window.scrollY;
