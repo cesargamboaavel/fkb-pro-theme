@@ -63,7 +63,7 @@ console.log('heeeeee2');
         setTimeout(function(){ // Force to wait until navigation has been loaded
               console.log('dsad');
                 document.querySelector('.btn-sidebar-toggle');
-            }, 0);
+            }, 1);
         
         console.log('heeeeee3', test);
         if (document.querySelector('.sidebar-sections')) {
