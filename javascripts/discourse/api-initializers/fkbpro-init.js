@@ -66,10 +66,8 @@ export default {
         <a class="text" href=${locationString} title=${text}>${text}
         </a>
     `;
-      })
-      if (document.querySelector('.sidebar-sections')) {
         document.querySelector('.sidebar-sections').prepend(divEl);
-      }
+      })
     });
     withPluginApi('0.8.13', (api) => {
       const site = api.container.lookup('site:main');
