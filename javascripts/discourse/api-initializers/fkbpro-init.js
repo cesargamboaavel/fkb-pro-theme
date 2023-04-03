@@ -24,8 +24,8 @@ export default {
 
       ////////
 console.log('heeeeee2');
-      
-      
+
+
        function whereToReturn() {
               // first option, using parameters if they exist
               if (localStorage.getItem('full_community_path')) {
@@ -56,15 +56,15 @@ console.log('heeeeee2');
                 return window.location.origin.replace('.community', '');
               }
             }
-      
-      
+
+
       window.addEventListener('load', function () {
         var test;
         setTimeout(function(){ // Force to wait until navigation has been loaded
               console.log('dsad');
                 document.querySelector('.btn-sidebar-toggle');
             }, 1);
-        
+
         console.log('heeeeee3', test);
         if (document.querySelector('.sidebar-sections')) {
           let text = 'Back to School';
@@ -80,9 +80,8 @@ console.log('heeeeee2');
 `;
           document.querySelector('.sidebar-sections').prepend(divEl);
         }
-        if (test) {
           console.log('heeeeee4');
-          test.addEventListener('click', function () {
+          window.addEventListener('click', function () {
             console.log('heeeeee5');
             // tested code
             const queryString = window.location.search;
@@ -99,9 +98,9 @@ console.log('heeeeee2');
               );
             }
 
-            
+
             console.log('final');
-            
+
             if (document.querySelector('.sidebar-sections')) {
           let text = 'Back to School';
             console.log('hereeee');
@@ -119,23 +118,7 @@ console.log('heeeeee2');
         }
             // tested code
           });
-        }
       });
-      ////////
-
-      api.onAppEvent('sidebar-hamburger-dropdown:rendered', () => {
-        console.log('hamburguer');
-      });
-
-      api.onAppEvent('user-menu:navigation', () => {
-        console.log('user menu navigation');
-      });
-
-      api.onAppEvent('user-menu:rendered', () => {
-        console.log('user menu navigation');
-      });
-
-      ///////
       // Sticky New Topic Banner Latest
       api.modifyClass('controller:discovery/topics', {
         pluginId: 'sticky-new-topics-banner',
