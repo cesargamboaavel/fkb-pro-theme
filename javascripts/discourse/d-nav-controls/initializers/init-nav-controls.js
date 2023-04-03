@@ -22,7 +22,9 @@ export default {
           console.log('clicked');
         });
       });
-
+      api.onAppEvent('sidebar-hamburger-dropdown:rendered', () => {
+        console.log('a custom footer was rendered');
+      });
       window.addEventListener('scroll', function() { 
         scrollTop = window.scrollY;
         if (
